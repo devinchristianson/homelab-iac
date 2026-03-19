@@ -1,0 +1,30 @@
+scheme_version: 1
+os:
+  ssh_authorized_keys:
+    - github:devinchristianson
+  hostname: harvester1
+install:
+  harvester:
+    storage_class:
+      replica_count: 1
+sans:
+  - harvester1.lab.internal
+install:
+  mode: create
+  role: default
+  skipchecks: true
+  vip_mode: dhcp
+  cluster_pod_cidr: 10.201.0.0/16
+  cluster_service_cidr: 10.202.0.0/16
+  cluster_dns: 10.202.0.53
+###### SPECIFIC TO HOST ######
+  device: /dev/sdc
+  data_disk: /dev/sda
+  management_interface:
+    method: dhcp
+    interfaces:
+    - name: 9:ecenp34s0
+      hwAddr: "00:e0:4c:6e:09:ec"
+# sdc install disk
+# sda data disk
+# management nic enp34s0
