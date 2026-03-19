@@ -1,3 +1,4 @@
+# https://raw.githubusercontent.com/devinchristianson/homelab-iac/main/init/harvester.yaml
 scheme_version: 1
 os:
   ssh_authorized_keys:
@@ -25,6 +26,3 @@ install:
     interfaces:
     - name: 9:ecenp34s0
       hwAddr: "00:e0:4c:6e:09:ec"
-# sdc install disk
-# sda data disk
-# management nic enp34s0
